@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Complete Tax Debt</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
+    
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
+    <!-- font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif; -->
+    
+    <link href="css/animate.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" href="imgs/160x160-TAXDebt.jpg" type="image/ico" sizes="16x16">
+    </head>
+</head>
+<body>
+    <!-- Header -->
+    <div class="bgColor">
+        <header id="main-header">
+            <div class="container-margin">
+                <div class="container-content"> 
+                    <div id="logoLeft">
+                        <img src="./imgs/logo.png" class="logoImg" alt="">
+                    </div>
+                    <div id="numberRight">
+                        <span id="whole-num">
+                            <span id="text-top" >
+                            Call Now For More Information
+                            </span>
+                            <br>
+                            <i class="fas fa-phone"></i> 1-888-873-3681
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!-- Image and multi step Form -->
+    <div id="bgImg">
+        <form id="regForm" onSubmit="if(!confirm('ERROR OOPS! This is only a demo site.')){return false;}" data-toggle="validator" >
+        
+            <h2>Solve Your IRS Tax Debt Problems</h2>
+        
+            <!-- One "tab" for each step in the form: -->
+            <div class="tab title">How much tax debt do you have?
+                <br>
+                <select id="select-debt" class="select-dropdown" onchange="nextPrev(1)">
+                    <option value="" selected hidden>Please Select</option>
+                    <option value="5000">$0 - $9,999</option>
+                    <option value="15000">$10,000 - $19,999</option>
+                    <option value="35000">$20,000 - $49,999</option>
+                    <option value="50000">$50,000 + </option>
+                </select>
+            </div> 
+        
+            <div class="tab title" >What type of taxes do you have?
+                <br>
+                <select id="select-type" class="select-dropdown" onchange="nextPrev(1)">
+                    <option value="" selected hidden>Please Select</option>
+                    <option value="state">State Taxes</option>
+                    <option value="federal">Federal Taxes</option>
+                    <option value="state-federal">State &amp; Federal Taxes</option>
+                </select>
+            </div>
+        
+            <div class="tab title">What is your filing status?
+                <br>
+                <select id="select-status" class="select-dropdown" onchange="nextPrev(1)">
+                    <option value="" selected hidden>Please Select</option>
+                    <option value="filed">Filed</option>
+                    <option value="not-filed">Not Filed</option>
+                </select>
+            </div>
+            
+            <div class="tab title">Complete The Form and Get Your FREE Consultation
+                <!-- Name input -->
+                <p>
+                    <input type="text" placeholder="Full Name" required >
+                </p>
+                <!-- Email Input -->
+                <p>
+                    <input type="email" placeholder="Email" required>
+                </p>
+                <!-- Phone Input -->
+                <p>
+                    <input type="text" id="phone-number-field" placeholder="Phone: 123-456-7890" pattern="^(\([0-9]{3}\)|[0-9]{3}-)[0-9]{3}-[0-9]{4}$" 
+                    required>
+                </p>
+                <!-- Zipcode Input -->
+                <p>
+                    <input type="text" placeholder="Zip Code" pattern="^\d{5}(?:[-\s]\d{4})?$" required>
+                </p>
+                <!-- Submit Button -->
+                <div style="overflow:auto;">
+                    <div style="text-align: center;">
+                        <!-- Change this to not go next prev just submit form -->
+                        <button type="submit" id="submitBtn">Get My FREE Consultation</button>
+                    </div>
+                </div>
+                <!-- TCPA -->
+                <p id="disclaimer">
+                    By clicking the "Get My FREE Consultation" button, you agree to our Privacy Policy and authorize Complete Tax Debt and its
+                    partners to contact you at the phone number you provided using automated technology including auto-dialers,
+                    pre-recorded messages and text messages, even if your phone is a mobile number or is listed on any state, federal or
+                    corporate "Do Not Call" lists, and you are not required to give your consent as a condition of service.
+                </p>
+                <!-- Secure Logos -->
+                <img src="./imgs/secure-logos.png" id="secure-logos"alt="secure Logos">
+            </div>
+            
+            <!-- Circles which indicates the steps of the form: -->
+            <div id="step-circles">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+
+        </form>
+    </div>
+    <!-- What We Help With List -->
+    <div class="bgColor" >
+        <div class="container-margin">
+            <h3 id="help-title">WE CAN HELP WITH</h3>
+            <div class="list-container">  
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><i class="fas fa-check-circle fa-fw"></i></th>
+                            <td>Tax Levies &amp; Liens</td>
+                        </tr>
+                        <tr>
+                            <th><i class="fas fa-check-circle fa-fw"></i></th>
+                            <td>Wage Garnishment</td>
+                        </tr>
+                        <tr>
+                            <th><i class="fas fa-check-circle fa-fw"></i></th>
+                            <td>End Penalties &amp; Interest</td>
+                        </tr>
+                        <tr>
+                            <th><i class="fas fa-check-circle fa-fw"></i></th>
+                            <td>Tax Negotiation &amp; Settlement</td>
+                        </tr>
+                    </tbody>
+                </table>      
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><i class="fas fa-check-circle fa-fw"></i></th>
+                            <td>Reduce IRS Tax Debt</td>
+                        </tr>
+                        <tr>
+                            <th><i class="fas fa-check-circle fa-fw"></i></th>
+                            <td>Resolve Back Taxes</td>
+                        </tr>
+                        <tr>
+                            <th><i class="fas fa-check-circle fa-fw"></i></th>
+                            <td>IRS Audit Defense</td>
+                        </tr>
+                        <tr>
+                            <th><i class="fas fa-check-circle fa-fw"></i></th>
+                            <td>Payroll Tax Negotiation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Three Steps Section -->
+    <div class="bgColor2">
+        <div class="container-margin">
+            <h2 id="threeStepTitle">TAX RELIEF IN 3 EASY STEPS!</h2>
+            <div id="threeSteps">
+                <div class="sec-box">
+                    <p><span class="num">1.</span><br> Complete the Secure Application Above</p>
+                </div>
+                <div class="sec-box">
+                    <p><span class="num">2.</span><br> Get a 100% FREE, No Obligation Consultation with an IRS Tax Debt Expert</p>
+                </div>
+                <div class="sec-box">
+                    <p><span class="num">3.</span><br> Resolution of your
+                    Tax Debt, placing you back on path to IRS compliance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Img and text sections -->
+    <div class="bgColor2" id="imgTxtSection">
+        <div class="container-margin">
+            <div id="twoImg">
+                <div class="sec-img-txt">
+                    <img src="./imgs/icon-1.png" alt="FREE CONSULTATION Image">
+                    <span>
+                        <h3>FREE CONSULTATION</h3>
+                        One of our IRS Tax Debt experts will call you to get the details of your situation for FREE. Most lawyers charge for
+                        calls, but not Complete Tax Debt.
+                    </span>
+                </div>
+                <div class="sec-img-txt">
+                    <img src="./imgs/icon-2.png" alt="NO OBLIGATION Image">   
+                    <span>
+                        <h3>NO OBLIGATION</h3>
+                        One of our IRS Tax Debt experts will call you to get the details of your situation for FREE. Most lawyers charge for
+                        calls, but not Complete Tax Debt.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BBB Guarantee Secure logos section -->
+    <div class="bgColor2">
+        <div class="container-margin">
+            <div id="threeLogos">
+                <div class="sec-icon">
+                    <img src="./imgs/ico-1.png" alt="">
+                    <p>
+                        BBB "A" Rated
+                    </p>
+                </div>
+                <div class="sec-icon">
+                    <img src="./imgs/ico-2.png" alt="">
+                    <p>
+                        100% Service Guarantee
+                    </p>
+                </div>
+                <div class="sec-icon">
+                    <img src="./imgs/ico-3.png" alt="">
+                    <p>
+                        Secure & Trusted
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Staff Testimonials -->
+    <!-- <div class="bgColor">
+        <div class="container-margin">
+
+        </div>
+    </div> -->
+    <div class="bgColor2">
+        <div class="container-margin">
+            <h2 id="staff-test-title">Staff Testimonials</h2>
+            <div id="three-testimonials">
+                <div class="sec-test">
+                    <img class="staff-img" src="./imgs/head-1.png" alt="">
+                    <h3>Lauren</h3>
+                    
+                    <h4>Senior Tax Associate</h4>
+                    
+                    <p>“It’s a great feeling when I hear my clients tell me ‘Lauren, this is the first time I’ve slept through the entire
+                    night in a long, long time.’ Listening to comments like this makes me realize everyday that I’m truly making a
+                    difference in someone else’s life.”</p>
+                </div>
+                <div class="sec-test">
+                    <img class="staff-img" src="./imgs/head-2.png" alt="">
+                    <h3>Kevin</h3>
+                    
+                    <h4>Tax Supervisor</h4>
+                    
+                    <p>
+                        “It’s really a great feeling to come to work everyday and know that what I’m doing has such a positive impact on other
+                        people’s lives. Building bonds with my clients keeps us in touch well after we’ve accomplished their goal.”
+                    </p>
+                </div>
+                <div class="sec-test">
+                    <img class="staff-img" src="./imgs/head-3.png" alt="">
+                    <h3>Jessica</h3>
+                    
+                    <h4>Tax Preparer</h4>
+                    
+                    <p>
+                        “Helping my clients get their life back on track makes my job incredibly rewarding and that’s probably why I enjoy
+                        doing taxes so much. I help people save money and solve their problems everyday.”
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center" style="background: lightgray;">
+        <div style=" text-align:center !important; font-size:12px; color:#333;  padding:0 0%; "> <br>
+            <br>
+            <a href="#" onclick="return !window.open(this.href, 'link', 'width=600,height=500')" target="_blank">Privacy
+                Policy</a> | <a href="#" onclick="return !window.open(this.href, 'link', 'width=600,height=500')"
+                target="_blank">Terms and Conditions</a> | <a href="#" onclick="return !window.open(this.href, 'link', 'width=500,height=600')"
+                target="_blank">Unsubscribe</a>
+            <p> &copy;&nbsp;
+                <script language="JavaScript" type="text/javascript">document.write((new Date()).getFullYear());</script>
+                &nbsp; CompleteTaxDebt.com. All Rights Reserved. <br>
+                <br>
+                <br>
+            </p>
+        </div>
+    </footer>
+    
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
