@@ -259,6 +259,14 @@ button:hover {
 }
 /* ========== END of three logos and txt Sections ========== */
 /* ========== START of Staff Testimonials ========== */
+.lineFade {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    height: 2px;
+    background: #333333;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#2c3d50), to(#2c3d50), color-stop(50%, lightblue));
+}
+
 #staff-test-title{
     text-transform:uppercase;
 }
